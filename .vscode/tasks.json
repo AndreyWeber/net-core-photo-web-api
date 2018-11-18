@@ -1,0 +1,127 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Start Postman",
+            "type": "process",
+            "windows": {
+                "command": "C:\\Users\\${env:USERNAME}\\AppData\\Local\\Postman\\Update.exe",
+                "args": [
+                    "--processStart",
+                    "Postman.exe"
+                ]
+            },
+            "presentation": {
+                "echo": true,
+                "reveal": "silent",
+                "focus": false,
+                "panel": "shared"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Build (Debug)",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "build",
+                "${workspaceFolder}/PhotoWebApi.csproj"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "Build (self-contained win10-x64 Release)",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "publish",
+                "${workspaceFolder}/PhotoWebApi.csproj",
+                "-c",
+                "Release",
+                "-r",
+                "win10-x64"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "Build (win10-x64 Release)",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "publish",
+                "${workspaceFolder}/PhotoWebApi.csproj",
+                "--self-contained",
+                "false",
+                "-c",
+                "Release",
+                "-r",
+                "win10-x64"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "Build (self-contained linux-arm Release)",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "publish",
+                "${workspaceFolder}/PhotoWebApi.csproj",
+                "-c",
+                "Release",
+                "-r",
+                "linux-arm"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "Build (linux-arm Release)",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "publish",
+                "${workspaceFolder}/PhotoWebApi.csproj",
+                "--self-contained",
+                "false",
+                "-c",
+                "Release",
+                "-r",
+                "linux-arm"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "Clean",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "clean",
+                "${workspaceFolder}/PhotoWebApi.csproj"
+            ],
+            "problemMatcher": []
+        }
+    ]
+}
