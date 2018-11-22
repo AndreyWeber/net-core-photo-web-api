@@ -29,7 +29,7 @@
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/PhotoWebApi.csproj"
+                "${workspaceFolder}/net-core-photo-web-api.sln"
             ],
             "problemMatcher": "$msCompile"
         },
@@ -43,7 +43,7 @@
             "type": "process",
             "args": [
                 "publish",
-                "${workspaceFolder}/PhotoWebApi.csproj",
+                "${workspaceFolder}/net-core-photo-web-api.sln",
                 "-c",
                 "Release",
                 "-r",
@@ -61,7 +61,7 @@
             "type": "process",
             "args": [
                 "publish",
-                "${workspaceFolder}/PhotoWebApi.csproj",
+                "${workspaceFolder}/net-core-photo-web-api.sln",
                 "--self-contained",
                 "false",
                 "-c",
@@ -81,7 +81,7 @@
             "type": "process",
             "args": [
                 "publish",
-                "${workspaceFolder}/PhotoWebApi.csproj",
+                "${workspaceFolder}/net-core-photo-web-api.sln",
                 "-c",
                 "Release",
                 "-r",
@@ -99,7 +99,7 @@
             "type": "process",
             "args": [
                 "publish",
-                "${workspaceFolder}/PhotoWebApi.csproj",
+                "${workspaceFolder}/net-core-photo-web-api.sln",
                 "--self-contained",
                 "false",
                 "-c",
@@ -119,7 +119,7 @@
             "type": "process",
             "args": [
                 "clean",
-                "${workspaceFolder}/PhotoWebApi.csproj"
+                "${workspaceFolder}/net-core-photo-web-api.sln"
             ],
             "problemMatcher": []
         }
